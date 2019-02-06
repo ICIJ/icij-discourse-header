@@ -16,7 +16,7 @@
   background: darken($header_background, 20);
   color: text-contrast(darken($header_background, 20));
 
-  .title {
+  .title a {
     display: none;
   }
 }

@@ -118,6 +118,7 @@
 
       contents.push(this.attach('brand-logo'));
       contents.push(this.attach('brand-name'));
+      contents.push('{{plugin-outlet name="above-site-header"}}');
 
       const panelContents = [];
 
@@ -211,6 +212,9 @@
   });
 
   </script>
+
   <script type='text/x-handlebars' data-template-name='/connectors/above-site-header/brand-header'>
+  {{plugin-outlet name="above-brand-header"}}
   {{mount-widget widget="brand-header"}}
+  {{plugin-outlet name="bellow-brand-header"}}
   </script>
