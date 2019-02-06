@@ -1,9 +1,9 @@
 @import "theme_variables";
-@import "./functions";
+@import "./functions.scss";
 
 #main .d-header {
   background: darken($header_background, 20);
-  color: contrast-color(darken($header_background, 20));
+  color: b-contrast(darken($header_background, 20));
 
   .title {
     display: none;
@@ -28,6 +28,7 @@
     a {
       color: $secondary;
     }
+
     &:visited {
       color: $secondary;
     }
