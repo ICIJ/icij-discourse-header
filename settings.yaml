@@ -3,7 +3,7 @@ brand_name:
 website_url:
   default: '/'
 logo_url:
-  default: ''
+  default: 'https://www.icij.org/app/themes/icij/dist/images/favicons/apple-touch-icon-114x114_2dddab2f.png'
 mobile_logo_url:
   default: ''
 links:
