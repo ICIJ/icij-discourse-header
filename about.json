@@ -1,6 +1,6 @@
 {
-  "name": "Brand Header Theme Component",
-  "about_url": "https://meta.discourse.org/t/brand-header-theme-component/77977",
-  "license_url": "https://github.com/discourse/discourse-brand-header/blob/master/LICENSE.txt",
+  "name": "ICIJ Header Theme Component",
+  "about_url": "https://github.com/icij/icij-discourse-header/",
+  "license_url": "https://github.com/icij/icij-discourse-header/blob/master/LICENSE.txt",
   "component": true
 }

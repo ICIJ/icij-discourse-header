@@ -1,7 +1,7 @@
 brand_name:
-  default: ''
+  default: 'ICIJ'
 website_url:
-  default: ''
+  default: '/'
 logo_url:
   default: ''
 mobile_logo_url:

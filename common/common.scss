@@ -1,8 +1,11 @@
 @import "theme_variables";
 
+.d-header .title {
+    display: none;
+}
 .b-header {
   width: 100%;
-  background-color: $tertiary;
+  background-color: #551605;
   height: 48px;
   margin-bottom: 0;
 
@@ -13,6 +16,7 @@
   .title {
     float: left;
     margin-right: 24px;
+
     a {
       color: $secondary;
     }
@@ -31,7 +35,7 @@
   }
 
   nav.links {
-    float: left;
+    float: right;
   }
 
   .nav-pills {
