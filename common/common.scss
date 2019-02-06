@@ -1,37 +1,10 @@
 @import "theme_variables";
 
-/**
- * Calculate the luminance for a color.
- * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
- */
-@function b-luminance($color) {
-  $red: nth($linear-channel-values, red($color) + 1);
-  $green: nth($linear-channel-values, green($color) + 1);
-  $blue: nth($linear-channel-values, blue($color) + 1);
+@function text-contrast($n) {
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
 
-  @return .2126 * $red + .7152 * $green + .0722 * $blue;
-}
-
-/**
- * Calculate the contrast ratio between two colors.
- * See https://www.w3.org/TR/WCAG20-TECHS/G17.html#G17-tests
- */
-@function b-contrast-ratio($back, $front) {
-  $backLum: b-luminance($back) + .05;
-  $foreLum: b-luminance($front) + .05;
-
-  @return max($backLum, $foreLum) / min($backLum, $foreLum);
-}
-
-/**
- * Determine whether to use dark or light text on top of given color.
- * Returns black for dark text and white for light text.
- */
-@function b-contrast($color) {
-  $lightContrast: b-contrast-ratio($color, white);
-  $darkContrast: b-contrast-ratio($color, black);
-
-  @if ($lightContrast > $darkContrast) {
+  @if abs($color-brightness) < ($light-color/2){
     @return white;
   }
   @else {
@@ -41,7 +14,7 @@
 
 #main .d-header {
   background: darken($header_background, 20);
-  color: b-contrast(darken($header_background, 20));
+  color: text-contrast(darken($header_background, 20));
 
   .title {
     display: none;
@@ -51,7 +24,7 @@
 .b-header {
   width: 100%;
   background: $header_background;
-  color: b-contrast($header_background);
+  color: text-contrast($header_background);
   height: 48px;
   margin-bottom: 0;
 
