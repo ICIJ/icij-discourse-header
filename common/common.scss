@@ -54,6 +54,13 @@
     margin: 0;
   }
 
+  #brand-name {
+    font-size: 1.4em;
+    line-height: 32px;
+    color: text-contrast($header_background);
+    font-weight: bold;
+  }
+
   nav.links {
     float: right;
   }
