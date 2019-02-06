@@ -51,7 +51,7 @@
 .b-header {
   width: 100%;
   background: $header_background;
-  color: contrast-color($header_background);
+  color: b-contrast($header_background);
   height: 48px;
   margin-bottom: 0;
 
