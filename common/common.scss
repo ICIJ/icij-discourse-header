@@ -1,7 +1,9 @@
 @import "theme_variables";
+@import "./functions";
 
 #main .d-header {
   background: darken($header_background, 20);
+  color: contrast-color(darken($header_background, 20));
 
   .title {
     display: none;
@@ -10,7 +12,8 @@
 
 .b-header {
   width: 100%;
-  background-color: $header_background;
+  background: $header_background;
+  color: contrast-color($header_background);
   height: 48px;
   margin-bottom: 0;
 
