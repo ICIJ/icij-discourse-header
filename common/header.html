@@ -1,5 +1,4 @@
 <script type="text/discourse-plugin" version="0.8">
-
   const { h } = require('virtual-dom');
   const { applyDecorators } = require('discourse/widgets/widget');
   const SiteHeaderComponent = require('discourse/components/site-header').default;
@@ -209,11 +208,10 @@
       return settings.brand_name || this.siteSettings.title;
     }
   });
+</script>
 
-  </script>
-
-  <script type='text/x-handlebars' data-template-name='/connectors/above-site-header/brand-header'>
-  {{plugin-outlet name="above-brand-header"}}
-  {{mount-widget widget="brand-header"}}
-  {{plugin-outlet name="bellow-brand-header"}}
-  </script>
+<script type='text/x-handlebars' data-template-name='/connectors/above-site-header/brand-header'>
+{{plugin-outlet name="above-brand-header"}}
+{{mount-widget widget="brand-header"}}
+{{plugin-outlet name="bellow-brand-header"}}
+</script>
