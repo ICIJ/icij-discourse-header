@@ -24,7 +24,7 @@
 .b-header {
   width: 100%;
   background: $header_background;
-  color: text-contrast($header_background);
+  color: text-contrast(darken($header_background, 20));
   height: 48px;
   margin-bottom: 0;
 
@@ -36,13 +36,11 @@
     float: left;
     margin-right: 24px;
 
-    a {
+    a, a:visited {
       color: $secondary;
+      color: text-contrast(darken($header_background, 20));
     }
 
-    &:visited {
-      color: $secondary;
-    }
   }
 
   #brand-logo {
@@ -68,7 +66,7 @@
   .nav-pills {
     margin-bottom: 0;
     > li > a {
-      color: $secondary;
+      color: text-contrast($header_background);
       line-height: 22px;
       &:hover {
         color: $quaternary;
